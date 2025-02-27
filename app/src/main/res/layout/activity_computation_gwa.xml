@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ComputationGwa">
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="370dp"
+      android:layout_height="80dp"
+      app:cardCornerRadius="15dp"
+      app:cardBackgroundColor="@color/alice"
+      android:layout_gravity="center"
+      android:layout_marginTop="30dp"
+      app:cardElevation="5dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="20dp"
+              android:orientation="horizontal">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="GWA:"
+                  android:textAllCaps="true"
+                  android:paddingStart="10dp"
+                  android:textSize="25sp"
+                  android:textColor="@color/blue"
+                  android:textStyle="bold"/>
+
+              <TextView
+                  android:id="@+id/txtGwa"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="GWA"
+                  android:textAllCaps="true"
+                  android:textSize="25sp"
+                  android:paddingStart="10dp"
+                  android:textColor="@color/blue"
+                  android:textStyle="bold"/>
+
+
+          </LinearLayout>
+
+
+      </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnAnotherCalculate"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="530dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_solid"
+        android:text="Calculate Another"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:backgroundTint="@null"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_transparent"
+        android:text="Back"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:backgroundTint="@null"/>
+
+</LinearLayout>
