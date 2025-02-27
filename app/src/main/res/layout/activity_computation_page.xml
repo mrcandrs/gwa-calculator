@@ -47,17 +47,6 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnClear"
-        android:layout_width="380dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_solid"
-        android:text="clear all"
-        android:textAllCaps="true"
-        app:backgroundTint="@null" />
-
-    <Button
         android:id="@+id/btnCalculateSubject"
         android:layout_width="380dp"
         android:layout_height="50dp"
@@ -79,6 +68,22 @@
         android:text="Calculate gwa"
         android:textAllCaps="true"
         app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_transparent"
+        android:text="clear all"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:backgroundTint="@null" />
+
+
+
 
 
 
