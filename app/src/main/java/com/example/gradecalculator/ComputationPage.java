@@ -58,14 +58,30 @@ public class ComputationPage extends AppCompatActivity {
             return;
         }
 
+        float totalConvertedGrade = 0;
+        int subjectCount = gradeList.size();
+
         for (SubjectClass subject : gradeList) {
-            float finalGrade = subject.getPrelims() + subject.getMidterm() + subject.getPrefinals() + subject.getFinals();
+            // Calculate final grade as average
+            float finalGrade = (subject.getPrelims() + subject.getMidterm() + subject.getPrefinals() + subject.getFinals()) / 4;
+
+            // Convert final grade to GWA using the conversion scale
             float convertedGrade = (float) convertToGradeScale(finalGrade);
             subject.setFinal_grade(convertedGrade);
+
+            // Add converted grade to total
+            totalConvertedGrade += convertedGrade;
         }
 
-        adapter.updateData(gradeList);
+        // Compute total GWA by averaging all converted grades
+        float gwa = totalConvertedGrade / subjectCount;
+
+        // Pass GWA to ComputationGwa Activity
+        Intent intent = new Intent(ComputationPage.this, ComputationGwa.class);
+        intent.putExtra("computed_GWA", gwa);  // Send GWA value to next activity
+        startActivity(intent);
     }
+
 
     private double convertToGradeScale(double gwa) {
         if (gwa >= 97.5) return 1.00;
