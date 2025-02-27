@@ -22,6 +22,6 @@ public class ComputationGwa extends AppCompatActivity {
         float gwa = getIntent().getFloatExtra("computed_GWA", 0);
 
         // Display the GWA value in the TextView
-        txtGwa.setText("GWA: " + String.format("%.2f", gwa));
+        txtGwa.setText(String.format("%.2f", gwa));
     }
 }
