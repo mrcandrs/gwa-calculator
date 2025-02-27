@@ -38,7 +38,7 @@ public class ComputationAdapter extends RecyclerView.Adapter<ComputationAdapter.
         holder.tv_Prefinals.setText(String.format("%.2f", compClass.getPrefinals()));
         holder.tv_Finals.setText(String.format("%.2f", compClass.getFinals()));
 
-        // Fix the bug: Display original input values before weighting
+        //Display original input values before weighting
         float originalPrelims = compClass.getPrelims() / 0.20f;
         float originalMidterm = compClass.getMidterm() / 0.20f;
         float originalPrefinals = compClass.getPrefinals() / 0.20f;
