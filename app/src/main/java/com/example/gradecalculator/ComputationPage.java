@@ -76,10 +76,8 @@ public class ComputationPage extends AppCompatActivity {
     }
 
     private float calculateSpecificResult(float rawGwa) {
-        return 1.00f + ((100.0f - rawGwa) / 20.0f);
+        return 1.68f + ((100.0f - rawGwa) / 20.0f);
     }
-
-
 
 
     private void clearDatabase() {
