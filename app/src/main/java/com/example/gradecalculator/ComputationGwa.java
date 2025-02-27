@@ -12,7 +12,7 @@ public class ComputationGwa extends AppCompatActivity {
     private TextView txtGwa;
 
     private ActivityComputationGwaBinding root;
-
+    //SuperJ
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
