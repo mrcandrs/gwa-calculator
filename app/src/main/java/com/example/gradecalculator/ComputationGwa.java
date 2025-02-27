@@ -20,15 +20,15 @@ public class ComputationGwa extends AppCompatActivity {
         setContentView(root.getRoot());
 
 
-        // Get raw final grade and specific result from Intent
-        float rawGwa = getIntent().getFloatExtra("RAW_GWA", 5.00f); // Default is 5.00
-        float specificResult = getIntent().getFloatExtra("SPECIFIC_RESULT", 5.00f); // Default is 5.00
+        // Get values from Intent
+        float exactGwa = getIntent().getFloatExtra("RAW_GWA", 1.00f);
+        float preciseConvertedGwa = getIntent().getFloatExtra("EXACT_CONVERTED_GWA", 1.00f);
 
-        // Display raw final grade in txtGwa
-        root.txtGwa.setText(String.format("%.2f", rawGwa)); // Example: 95.75
+        // Display the exact GWA normally
+        root.txtGwa.setText(String.format("%.2f", exactGwa));
 
-        // Display specific result in txtConvertedGwa
-        root.txtConvertedGwa.setText(String.format("(%.2f)", specificResult)); // Example: 1.68
+        // Display the **EXACT CONVERTED GRADE (not table-based) inside parentheses**
+        root.txtConvertedGwa.setText(String.format("(%.2f)", preciseConvertedGwa));
 
 
 

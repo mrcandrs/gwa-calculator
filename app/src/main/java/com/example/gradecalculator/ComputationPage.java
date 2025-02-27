@@ -58,27 +58,44 @@ public class ComputationPage extends AppCompatActivity {
             return;
         }
 
-        float totalFinalGrades = 0;
+        float totalFinalGrades = 0;  // Sum of raw grades
+        float totalConvertedGrades = 0; // Sum of converted grades
         int totalSubjects = gradeList.size();
 
         for (SubjectClass subject : gradeList) {
-            totalFinalGrades += subject.getFinal_grade();  // Raw final grades (e.g., 99.00, 95.75, etc.)
+            float finalGrade = subject.getFinal_grade();
+            float convertedGrade = convertGWA(finalGrade);  // Convert individual grades
+
+            totalFinalGrades += finalGrade;
+            totalConvertedGrades += convertedGrade;
         }
 
-        float rawGwa = totalFinalGrades / totalSubjects; // Example: 95.75
-        float specificResult = calculateSpecificResult(rawGwa); // Example: 1.68
+        // Compute the raw GWA
+        float rawGwa = totalFinalGrades / totalSubjects;
 
-        // Pass both values to ComputationGwa
+        // Compute the converted GWA (average of converted grades)
+        float exactConvertedGwa = totalConvertedGrades / totalSubjects;
+
+        // Pass values to ComputationGwa Activity
         Intent intent = new Intent(ComputationPage.this, ComputationGwa.class);
-        intent.putExtra("RAW_GWA", rawGwa);         // Send raw final grade (e.g., 95.75)
-        intent.putExtra("SPECIFIC_RESULT", specificResult); // Send specific result (e.g., 1.68)
+        intent.putExtra("RAW_GWA", rawGwa);
+        intent.putExtra("EXACT_CONVERTED_GWA", exactConvertedGwa);
         startActivity(intent);
     }
 
-    private float calculateSpecificResult(float rawGwa) {
-        return 1.68f + ((100.0f - rawGwa) / 20.0f);
+    // Conversion function (based on predefined ranges)
+    private float convertGWA(float gwa) {
+        if (gwa >= 97.5) return 1.00f;
+        if (gwa >= 94.5) return 1.25f;
+        if (gwa >= 91.5) return 1.50f;
+        if (gwa >= 88.5) return 1.75f;
+        if (gwa >= 85.5) return 2.00f;
+        if (gwa >= 81.5) return 2.25f;
+        if (gwa >= 77.5) return 2.50f;
+        if (gwa >= 73.5) return 2.75f;
+        if (gwa >= 69.5) return 3.00f;
+        return 5.00f;  // Failing grade
     }
-
 
     private void clearDatabase() {
         db.getSubjectDAO().deleteAllGrades();
