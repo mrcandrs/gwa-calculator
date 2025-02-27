@@ -83,6 +83,7 @@ public class ComputationPage extends AppCompatActivity {
     }
 
 
+
     private double convertToGradeScale(double gwa) {
         if (gwa >= 97.5) return 1.00;
         if (gwa >= 94.5) return 1.25;
