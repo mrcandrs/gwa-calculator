@@ -58,20 +58,27 @@ public class ComputationPage extends AppCompatActivity {
             return;
         }
 
-        float totalGrades = 0; // Sum of all final grades
-        int totalSubjects = gradeList.size(); // Number of subjects
+        float totalFinalGrades = 0;
+        int totalSubjects = gradeList.size();
 
         for (SubjectClass subject : gradeList) {
-            totalGrades += subject.getFinal_grade();  // Add each subject's grade
+            totalFinalGrades += subject.getFinal_grade();  // Raw final grades (e.g., 99.00, 95.75, etc.)
         }
 
-        float exactGwa = totalGrades / totalSubjects; // Compute the average GWA
+        float rawGwa = totalFinalGrades / totalSubjects; // Example: 95.75
+        float specificResult = calculateSpecificResult(rawGwa); // Example: 1.68
 
-        // Pass the precise GWA (e.g., 1.02) to ComputationGwa activity
+        // Pass both values to ComputationGwa
         Intent intent = new Intent(ComputationPage.this, ComputationGwa.class);
-        intent.putExtra("GWA_RESULT", exactGwa); // Send precise GWA
+        intent.putExtra("RAW_GWA", rawGwa);         // Send raw final grade (e.g., 95.75)
+        intent.putExtra("SPECIFIC_RESULT", specificResult); // Send specific result (e.g., 1.68)
         startActivity(intent);
     }
+
+    private float calculateSpecificResult(float rawGwa) {
+        return 1.00f + ((100.0f - rawGwa) / 20.0f);
+    }
+
 
 
 

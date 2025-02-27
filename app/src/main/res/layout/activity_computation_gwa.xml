@@ -49,6 +49,17 @@
                   android:textColor="@color/blue"
                   android:textStyle="bold"/>
 
+              <TextView
+                  android:id="@+id/txtConvertedGwa"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="(0.00)"
+                  android:textAllCaps="true"
+                  android:textSize="25sp"
+                  android:paddingStart="10dp"
+                  android:textColor="@color/blue"
+                  android:textStyle="bold"/>
+
 
           </LinearLayout>
 
