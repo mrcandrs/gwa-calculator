@@ -10,6 +10,7 @@ import com.example.gradecalculator.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    //root binding
     private ActivityMainBinding root;
 
     @Override
