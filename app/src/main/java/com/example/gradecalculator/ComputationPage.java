@@ -58,44 +58,22 @@ public class ComputationPage extends AppCompatActivity {
             return;
         }
 
-        float totalConvertedGrade = 0;
-        int subjectCount = gradeList.size();
+        float totalGrades = 0; // Sum of all final grades
+        int totalSubjects = gradeList.size(); // Number of subjects
 
         for (SubjectClass subject : gradeList) {
-            // Calculate final grade as average
-            float finalGrade = (subject.getPrelims() + subject.getMidterm() + subject.getPrefinals() + subject.getFinals()) / 4;
-
-            // Convert final grade to GWA using the conversion scale
-            float convertedGrade = (float) convertToGradeScale(finalGrade);
-            subject.setFinal_grade(convertedGrade);
-
-            // Add converted grade to total
-            totalConvertedGrade += convertedGrade;
+            totalGrades += subject.getFinal_grade();  // Add each subject's grade
         }
 
-        // Compute total GWA by averaging all converted grades
-        float gwa = totalConvertedGrade / subjectCount;
+        float exactGwa = totalGrades / totalSubjects; // Compute the average GWA
 
-        // Pass GWA to ComputationGwa Activity
+        // Pass the precise GWA (e.g., 1.02) to ComputationGwa activity
         Intent intent = new Intent(ComputationPage.this, ComputationGwa.class);
-        intent.putExtra("computed_GWA", gwa);  // Send GWA value to next activity
+        intent.putExtra("GWA_RESULT", exactGwa); // Send precise GWA
         startActivity(intent);
     }
 
 
-
-    private double convertToGradeScale(double gwa) {
-        if (gwa >= 97.5) return 1.00;
-        if (gwa >= 94.5) return 1.25;
-        if (gwa >= 91.5) return 1.50;
-        if (gwa >= 88.5) return 1.75;
-        if (gwa >= 85.5) return 2.00;
-        if (gwa >= 81.5) return 2.25;
-        if (gwa >= 77.5) return 2.50;
-        if (gwa >= 73.5) return 2.75;
-        if (gwa >= 69.5) return 3.00;
-        return 5.00;
-    }
 
     private void clearDatabase() {
         db.getSubjectDAO().deleteAllGrades();
