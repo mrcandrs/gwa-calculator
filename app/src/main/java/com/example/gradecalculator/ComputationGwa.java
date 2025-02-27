@@ -1,6 +1,8 @@
 package com.example.gradecalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,5 +25,15 @@ public class ComputationGwa extends AppCompatActivity {
 
         // Display the GWA value in the TextView
         txtGwa.setText(String.format("%.2f", gwa));
+
+
+        root.btnAnotherCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ComputationGwa.this, ComputationPage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
