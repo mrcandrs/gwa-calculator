@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.gradecalculator.databinding.ActivityComputationGwaBinding;
 
 public class ComputationGwa extends AppCompatActivity {
@@ -31,7 +29,6 @@ public class ComputationGwa extends AppCompatActivity {
         // Display the converted GWA inside parentheses
         root.txtConvertedGwa.setText(String.format("(%.2f)", preciseConvertedGwa));
 
-
         // Change the text color of GWA
         if (exactGwa > 89.50) {
             root.txtGwa.setTextColor(Color.BLUE);
@@ -41,41 +38,33 @@ public class ComputationGwa extends AppCompatActivity {
             root.txtGwa.setTextColor(Color.BLACK);
         }
 
-        // Change the color of precise GWA
+        // Display the alert dialog and set text colors correctly
         if (preciseConvertedGwa <= 1.75) {
-            root.txtConvertedGwa.setTextColor(Color.BLUE);
-            showCustomDialog(true); // Show success dialog
-        } else if (preciseConvertedGwa >= 3.00) {
-            root.txtConvertedGwa.setTextColor(Color.RED);
-            showCustomDialog(false); // Show failed dialog
+            root.txtConvertedGwa.setTextColor(Color.BLUE);  // Green for <= 1.75
+            showCustomDialog(R.layout.dialog_sucess);  // Success Dialog
+        } else if (preciseConvertedGwa <= 3.00) {
+            root.txtConvertedGwa.setTextColor(Color.BLACK);  // Blue for <= 3.00
+            showCustomDialog(R.layout.dialog_normal);  // Passed Dialog
         } else {
-            root.txtConvertedGwa.setTextColor(Color.BLACK);
+            root.txtConvertedGwa.setTextColor(Color.RED);  // Red for > 3.01
+            showCustomDialog(R.layout.dialog_failed);  // Failed Dialog
         }
 
-        root.btnAnotherCalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ComputationGwa.this, HomePage.class);
-                startActivity(intent);
-                finish();
-            }
+        root.btnAnotherCalculate.setOnClickListener(view -> {
+            Intent intent = new Intent(ComputationGwa.this, HomePage.class);
+            startActivity(intent);
+            finish();
         });
 
-        root.btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ComputationGwa.this, ComputationPage.class);
-                startActivity(intent);
-                finish();
-            }
+        root.btnBack.setOnClickListener(view -> {
+            Intent intent = new Intent(ComputationGwa.this, ComputationPage.class);
+            startActivity(intent);
+            finish();
         });
     }
 
-    // Function to show custom success or failed dialog
-    private void showCustomDialog(boolean isSuccess) {
-        // Determine which layout to use
-        int layoutId = isSuccess ? R.layout.dialog_sucess : R.layout.dialog_failed;
-
+    // Function to show custom success, passed, or failed dialog
+    private void showCustomDialog(int layoutId) {
         // Inflate the custom dialog layout
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();

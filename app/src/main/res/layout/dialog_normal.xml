@@ -7,13 +7,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/red"
+        android:background="@color/blue"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_error"
+            android:src="@drawable/ic_sucess"
             android:padding="10dp"/>
 
 
@@ -24,13 +24,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Failed"
+            android:text="Passed"
             android:textStyle="bold"
-            android:textColor="@color/red"
+            android:textColor="@color/blue"
             android:textSize="30sp"
             android:textAlignment="center"
             android:gravity="center_horizontal"/>
@@ -38,14 +38,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sorry, you didn't make it to the Dean's List. Better luck next time!"
+            android:text="Congratulations boi!"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textAlignment="center"
             android:gravity="center_horizontal"/>
-        
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnOkay"
             android:layout_width="200dp"
@@ -53,8 +53,8 @@
             android:layout_gravity="center"
             android:text="Ok"
             android:textSize="16sp"
-            android:textColor="@color/red"
-            android:background="@drawable/btn_red_error"
+            android:textColor="@color/blue"
+            android:background="@drawable/btn_transparent"
             android:layout_marginTop="30dp"/>
 
     </LinearLayout>
