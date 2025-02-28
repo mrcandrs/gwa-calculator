@@ -171,6 +171,20 @@
         app:backgroundTint="@null"
         android:textSize="18sp"/>
 
+    <Button
+        android:id="@+id/btnViewGrade"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:text="View grades"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_transparent"
+        app:backgroundTint="@null"
+        android:textSize="18sp"/>
+
 
 
 
