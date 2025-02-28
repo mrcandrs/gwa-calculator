@@ -42,6 +42,28 @@ public class ComputationGwa extends AppCompatActivity {
             root.txtStatus.setTextColor(Color.GREEN); // Set text color to green for passing grades
         }
 
+        //To change the color of GWA
+        if (exactGwa > 89.50)
+        {
+            root.txtGwa.setTextColor(Color.BLUE);
+        } else if (exactGwa < 69.50)
+        {
+            root.txtGwa.setTextColor(Color.RED);
+        } else {
+            root.txtGwa.setTextColor(Color.BLACK);
+        }
+
+        //To change the color of precise GWA
+        if (preciseConvertedGwa <= 1.75) {
+            root.txtConvertedGwa.setTextColor(Color.BLUE);
+        }
+        else if (preciseConvertedGwa >= 3.00) {
+            root.txtConvertedGwa.setTextColor(Color.RED);
+        }
+        else {
+            root.txtConvertedGwa.setTextColor(Color.BLACK);
+        }
+
 
         root.btnAnotherCalculate.setOnClickListener(new View.OnClickListener() {
             @Override

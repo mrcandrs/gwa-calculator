@@ -1,5 +1,6 @@
 package com.example.gradecalculator.Adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,25 @@ public class ComputationAdapter extends RecyclerView.Adapter<ComputationAdapter.
         // Display the converted final grade (grading scale)
         float convertedFinalGrade = (float) convertToGradeScale(finalGrade);
         holder.tv_Converted_FinalGrade.setText(String.format("(%.2f)", convertedFinalGrade));
+
+        // Set the text color of tv_FinalGrade based on the final grade
+        if (finalGrade > 89.50f) {
+            holder.tv_FinalGrade.setTextColor(Color.BLUE);
+        } else if (finalGrade < 69.50f) {
+            holder.tv_FinalGrade.setTextColor(Color.RED);
+        } else {
+            holder.tv_FinalGrade.setTextColor(Color.BLACK);
+        }
+
+        if (convertedFinalGrade <= 1.75) {
+            holder.tv_Converted_FinalGrade.setTextColor(Color.BLUE);
+        } else if (convertedFinalGrade >= 3.00) {
+            holder.tv_Converted_FinalGrade.setTextColor(Color.RED);
+        } else {
+            holder.tv_Converted_FinalGrade.setTextColor(Color.BLACK);
+        }
+
+
     }
 
     @Override

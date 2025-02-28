@@ -76,6 +76,8 @@ public class ComputationPage extends AppCompatActivity {
         // Compute the converted GWA (average of converted grades)
         float exactConvertedGwa = totalConvertedGrades / totalSubjects;
 
+
+
         // Pass values to ComputationGwa Activity
         Intent intent = new Intent(ComputationPage.this, ComputationGwa.class);
         intent.putExtra("RAW_GWA", rawGwa);
