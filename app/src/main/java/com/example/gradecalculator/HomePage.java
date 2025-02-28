@@ -33,7 +33,6 @@ public class HomePage extends AppCompatActivity {
         // Initialize Adapter
         adapter = new ComputationAdapter(new ArrayList<>());
 
-
         // Load data from Room database
         loadGradesFromDB();
 
@@ -71,13 +70,12 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        root.btnViewGrade.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePage.this, ComputationPage.class);
-                startActivity(intent);
-                finish();;
-            }
+        root.btnViewGrade.setOnClickListener(view -> {
+            Intent intent = new Intent(HomePage.this, ComputationPage.class);
+            startActivity(intent);
+
+            loadGradesFromDB();
+            finish();
         });
     }
 
@@ -91,14 +89,50 @@ public class HomePage extends AppCompatActivity {
     }
 
     private boolean validateInputs() {
-        if (root.txtSubject.getText().toString().isEmpty() ||
-                root.txtPrelims.getText().toString().isEmpty() ||
-                root.txtMidterm.getText().toString().isEmpty() ||
-                root.txtPrefinals.getText().toString().isEmpty() ||
-                root.txtFinals.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+        String subject = root.txtSubject.getText().toString().trim();
+        String prelims = root.txtPrelims.getText().toString().trim();
+        String midterm = root.txtMidterm.getText().toString().trim();
+        String prefinals = root.txtPrefinals.getText().toString().trim();
+        String finals = root.txtFinals.getText().toString().trim();
+
+        boolean isValid = true; // Track validity
+
+        // Validate Subject (only letters)
+        if (subject.isEmpty()) {
+            root.txtSubject.setError("Subject field is required.");
+            isValid = false;
+        } else if (!subject.matches("[a-zA-Z ]+")) {
+            root.txtSubject.setError("Subject should contain only letters.");
+            isValid = false;
+        } else {
+            root.txtSubject.setError(null);
+        }
+
+        // Validate Grades (only numbers)
+        if (!isValidGrade(prelims, root.txtPrelims, "Prelims")) isValid = false;
+        if (!isValidGrade(midterm, root.txtMidterm, "Midterm")) isValid = false;
+        if (!isValidGrade(prefinals, root.txtPrefinals, "Prefinals")) isValid = false;
+        if (!isValidGrade(finals, root.txtFinals, "Finals")) isValid = false;
+
+        return isValid;
+    }
+
+    private boolean isValidGrade(String input, android.widget.EditText editText, String fieldName) {
+        if (input.isEmpty()) {
+            editText.setError(fieldName + " field is required.");
             return false;
         }
+        try {
+            float value = Float.parseFloat(input);
+            if (value < 0 || value > 100) {
+                editText.setError(fieldName + " should be between 0 and 100.");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            editText.setError(fieldName + " should be a valid number.");
+            return false;
+        }
+        editText.setError(null);
         return true;
     }
 
@@ -106,7 +140,6 @@ public class HomePage extends AppCompatActivity {
         try {
             return Float.parseFloat(input) * weight;
         } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid input for grades", Toast.LENGTH_SHORT).show();
             return 0.0f;
         }
     }
