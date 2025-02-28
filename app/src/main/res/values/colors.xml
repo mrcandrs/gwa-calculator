@@ -8,5 +8,6 @@
     <color name="alice">#F2F8FC</color>
     <color name="light">#fbf5df</color>
     <color name="light_blue">#034078</color>
-
+    <color name="green">#2b9348</color>
+    <color name="red">#ef233c</color>
 </resources>
