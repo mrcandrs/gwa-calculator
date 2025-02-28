@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ComputationGwa">
 
@@ -87,6 +88,8 @@
         android:layout_gravity="center"
         android:background="@drawable/btn_solid"
         android:text="Calculate Another"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textAllCaps="true"
         android:textSize="16sp"
         app:backgroundTint="@null"/>

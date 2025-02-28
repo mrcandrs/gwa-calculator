@@ -32,7 +32,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="510dp"
         android:orientation="vertical"
         android:paddingTop="10dp">
 
@@ -48,36 +48,42 @@
 
     <Button
         android:id="@+id/btnCalculateSubject"
-        android:layout_width="380dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_solid"
         android:text="Calculate Another Subject"
         android:textAllCaps="true"
+        android:textSize="16sp"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnCalculateGWA"
-        android:layout_width="380dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_solid"
         android:text="Calculate gwa"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textAllCaps="true"
         app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/btnClear"
-        android:layout_width="380dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_transparent"
         android:text="clear all"
         android:textColor="@color/blue"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:textAllCaps="true"
         app:backgroundTint="@null" />

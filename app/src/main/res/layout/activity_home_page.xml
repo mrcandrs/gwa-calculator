@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/alice"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".HomePage">
 
@@ -21,8 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:scrollbars="vertical">
+        android:orientation="vertical">
 
     <ImageView
     android:layout_width="100dp"
@@ -53,13 +52,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="380sp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        app:boxStrokeColor="@color/blue"
+        android:background="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtSubject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Enter you subject"/>
+            android:textColor="@color/black"
+            android:hint="Enter you subject"
+            android:textColorHint="@color/blue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,12 +90,17 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtPrelims"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue"
                 android:hint="Prelims"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,12 +115,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtMidterm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue"
                 android:hint="Midterms"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -127,12 +139,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtPrefinals"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue"
                 android:hint="Prefinals"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -147,12 +163,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtFinals"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue"
                 android:hint="Finals"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -168,8 +188,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:background="@drawable/btn_solid"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:backgroundTint="@null"
-        android:textSize="18sp"/>
+        android:textSize="16sp"/>
 
     <Button
         android:id="@+id/btnViewGrade"
@@ -183,7 +205,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_transparent"
         app:backgroundTint="@null"
-        android:textSize="18sp"/>
+        android:textSize="16sp"/>
 
 
 
