@@ -16,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40sp"
-            android:background="@drawable/error_bg"
+            android:background="@drawable/sucess_bg"
             android:orientation="horizontal">
 
             <ImageView
@@ -30,11 +30,10 @@
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/error_bg"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Failed"
+                android:text="passed"
                 android:textAllCaps="true"
                 android:layout_marginVertical="7dp"
                 />
@@ -51,8 +50,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:background="@drawable/btn_error"
-            android:backgroundTint="@color/red"
+            android:background="@drawable/btn_sucessful"
+            android:backgroundTint="@color/green"
             android:textAllCaps="true"/>
 
     </RelativeLayout>
