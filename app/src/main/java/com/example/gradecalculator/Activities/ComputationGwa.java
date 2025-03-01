@@ -1,4 +1,4 @@
-package com.example.gradecalculator;
+package com.example.gradecalculator.Activities;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.gradecalculator.R;
 import com.example.gradecalculator.databinding.ActivityComputationGwaBinding;
 
 public class ComputationGwa extends AppCompatActivity {

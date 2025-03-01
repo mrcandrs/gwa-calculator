@@ -1,11 +1,10 @@
-package com.example.gradecalculator;
+package com.example.gradecalculator.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.example.gradecalculator.Adapter.ComputationAdapter;
 import com.example.gradecalculator.Database.GradeDatabase;
 import com.example.gradecalculator.HelperClass.SubjectClass;

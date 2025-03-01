@@ -1,4 +1,4 @@
-package com.example.gradecalculator;
+package com.example.gradecalculator.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

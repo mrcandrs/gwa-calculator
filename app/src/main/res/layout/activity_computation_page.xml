@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/alice"
     android:orientation="vertical"
-    tools:context=".ComputationPage">
+    tools:context=".Activities.ComputationPage">
 
 
     <LinearLayout

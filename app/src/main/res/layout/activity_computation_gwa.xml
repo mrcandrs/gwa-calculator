@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ComputationGwa">
+    tools:context=".Activities.ComputationGwa">
 
   <androidx.cardview.widget.CardView
       android:layout_width="370dp"

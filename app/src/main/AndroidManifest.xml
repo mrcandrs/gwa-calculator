@@ -13,16 +13,16 @@
         android:theme="@style/Theme.GradeCalculator"
         tools:targetApi="31">
         <activity
-            android:name=".ComputationGwa"
+            android:name=".Activities.ComputationGwa"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".Activities.HomePage"
             android:exported="false" />
         <activity
-            android:name=".ComputationPage"
+            android:name=".Activities.ComputationPage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
