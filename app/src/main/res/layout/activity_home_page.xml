@@ -56,6 +56,7 @@
         app:boxStrokeColor="@color/blue"
         android:hint="Enter you subject"
         android:textColorHint="@color/blue"
+        app:placeholderTextColor="@color/blue"
         android:background="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -97,6 +98,7 @@
             android:background="@color/white"
             android:hint="Prelims"
             android:textColorHint="@color/blue"
+            app:placeholderTextColor="@color/blue"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -123,6 +125,7 @@
             app:boxStrokeColor="@color/blue"
             android:hint="Midterms"
             android:textColorHint="@color/blue"
+            app:placeholderTextColor="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -149,6 +152,7 @@
             app:boxStrokeColor="@color/blue"
             android:hint="Prefinals"
             android:textColorHint="@color/blue"
+            app:placeholderTextColor="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -175,6 +179,7 @@
             app:boxStrokeColor="@color/blue"
             android:hint="Finals"
             android:textColorHint="@color/blue"
+            app:placeholderTextColor="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
