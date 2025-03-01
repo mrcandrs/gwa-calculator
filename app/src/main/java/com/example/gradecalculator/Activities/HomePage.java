@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gradecalculator.AboutUs;
 import com.example.gradecalculator.Adapter.ComputationAdapter;
 import com.example.gradecalculator.Database.GradeDatabase;
 import com.example.gradecalculator.HelperClass.SubjectClass;
@@ -75,6 +76,11 @@ public class HomePage extends AppCompatActivity {
 
             loadGradesFromDB();
             finish();
+        });
+
+        root.imgAbout.setOnClickListener(view -> {
+            Intent intent = new Intent(HomePage.this, AboutUs.class);
+            startActivity(intent);
         });
     }
 

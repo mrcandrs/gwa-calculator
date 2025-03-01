@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AboutUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/blue">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="developers"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-black"
+                android:textAllCaps="true"
+                android:textColor="@color/blue"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/img_harvee"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/border"/>
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="John Harvee Quirido"
+                  android:textSize="20sp"
+                  android:textColor="@color/black"
+                  android:textAllCaps="true"
+                  android:textAlignment="center"
+                  android:textStyle="bold"
+                  android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Front-end"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/img_marc"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/border"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marc Albert Andres"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Back-end"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/img_kevin"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/border"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kevin Gabrez"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Analyst"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
