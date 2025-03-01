@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                                                                 startActivity(intent);
                                                                                 finish();
                                                                             }
-                                                                        }, 1000); // 1000 milliseconds = 1 second delay
+                                                                        }, 1500); // 1500 milliseconds = 1.5 second delay
                                                                     }
                                                                 });
                                                     }
