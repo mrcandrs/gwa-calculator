@@ -54,6 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:boxStrokeColor="@color/blue"
+        android:hint="Enter you subject"
+        android:textColorHint="@color/blue"
         android:background="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -61,9 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-            android:maxLines="1"
-            android:hint="Enter you subject"
-            android:textColorHint="@color/blue"/>
+            android:singleLine="true"
+           />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,6 +95,8 @@
             android:layout_gravity="center"
             app:boxStrokeColor="@color/blue"
             android:background="@color/white"
+            android:hint="Prelims"
+            android:textColorHint="@color/blue"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -102,8 +105,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 android:textColorHint="@color/blue"
-                android:maxLines="1"
-                android:hint="Prelims"/>
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,6 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:boxStrokeColor="@color/blue"
+            android:hint="Midterms"
+            android:textColorHint="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -127,8 +131,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 android:textColorHint="@color/blue"
-                android:maxLines="1"
-                android:hint="Midterms"/>
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,6 +147,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:boxStrokeColor="@color/blue"
+            android:hint="Prefinals"
+            android:textColorHint="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -152,8 +157,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 android:textColorHint="@color/blue"
-                android:maxLines="1"
-                android:hint="Prefinals"/>
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -167,12 +171,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380sp"
             android:layout_height="wrap_content"
-
-
-
-
             android:layout_gravity="center"
             app:boxStrokeColor="@color/blue"
+            android:hint="Finals"
+            android:textColorHint="@color/blue"
             android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -181,8 +183,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 android:textColorHint="@color/blue"
-                android:maxLines="1"
-                android:hint="Finals"/>
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

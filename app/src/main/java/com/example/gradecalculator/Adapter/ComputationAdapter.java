@@ -69,7 +69,7 @@ public class ComputationAdapter extends RecyclerView.Adapter<ComputationAdapter.
 
         if (convertedFinalGrade <= 1.75) {
             holder.tv_Converted_FinalGrade.setTextColor(Color.BLUE);
-        } else if (convertedFinalGrade >= 3.00) {
+        } else if (convertedFinalGrade >= 3.01) {
             holder.tv_Converted_FinalGrade.setTextColor(Color.RED);
         } else {
             holder.tv_Converted_FinalGrade.setTextColor(Color.BLACK);
