@@ -82,33 +82,33 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_gravity="center"
-                    android:padding="10dp"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/img_marc"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/border"/>
+                    android:src="@drawable/img_marc" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Marc Albert Andres"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textAllCaps="true"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"/>
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:text="Back-end"
-                    android:textSize="17sp"
+                    android:textAlignment="center"
                     android:textColor="@color/blue"
-                    android:textAlignment="center"/>
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

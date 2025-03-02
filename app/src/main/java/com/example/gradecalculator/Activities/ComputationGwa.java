@@ -59,7 +59,7 @@ public class ComputationGwa extends AppCompatActivity {
         });
 
         root.btnBack.setOnClickListener(view -> {
-            Intent intent = new Intent(ComputationGwa.this, ComputationPage.class);
+            Intent intent = new Intent(ComputationGwa.this, HomePage.class);
             startActivity(intent);
             finish();
         });

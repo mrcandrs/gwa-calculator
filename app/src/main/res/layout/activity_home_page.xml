@@ -20,7 +20,7 @@
             android:layout_height="50dp"
             android:src="@drawable/ic_error"
             android:padding="10dp"
-            android:layout_marginLeft="360dp"
+            android:layout_marginLeft="345dp"
             />
 
 
