@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="developers"
+                android:text="code exorxis"
                 android:textAlignment="center"
                 android:fontFamily="sans-serif-black"
                 android:textAllCaps="true"
